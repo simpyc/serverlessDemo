@@ -12,3 +12,6 @@ The service name will basically the folder
    serverless offline start -r us-east-1
 
 3.put this command as the value to the start in the package.json file   
+
+
+4. git commands
