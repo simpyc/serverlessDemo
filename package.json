@@ -1,0 +1,23 @@
+{
+  "name": "serverlessDemo",
+  "version": "1.0.0",
+  "description": "git kt demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simpyc/serverlessDemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simpyc/serverlessDemo/issues"
+  },
+  "homepage": "https://github.com/simpyc/serverlessDemo#readme",
+  "dependencies": {
+    "serverless-offline": "^3.20.3"
+  }
+}

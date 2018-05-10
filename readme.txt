@@ -15,3 +15,7 @@ The service name will basically the folder
 
 
 4. git commands
+
+suppose two git files are added file1.txt and file2.txt
+
+git add -u()
