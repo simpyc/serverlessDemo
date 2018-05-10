@@ -1,0 +1,42 @@
+service: todo
+provider:
+  name: aws
+  runtime: nodejs6.10
+  environment:
+    BLA: test
+functions:
+  Services:
+    handler: src/index.handler
+    events: 
+    - http:
+        path: /dynamodb
+        method: any
+        integration: lambda
+        cors:
+            origin: '*'
+            headers:
+                - Content-Type
+                - UserKey
+                - Authorization
+        request:
+            passThrough: WHEN_NO_MATCH
+            template:
+                application/json: ${file(serverless-request-template.txt)}
+
+    - http:
+        path: /
+        method: any
+        integration: lambda
+        cors:
+            origin: '*'
+            headers:
+                - Content-Type
+                - UserKey
+                - Authorization
+        request:        
+            passThrough: WHEN_NO_MATCH
+            template:
+                application/json: ${file(serverless-request-template.txt)}        
+        
+plugins:
+  - serverless-offline
