@@ -22,3 +22,5 @@ git add -u()
 
 
 testing the git commands
+
+giving the kt on git hub
